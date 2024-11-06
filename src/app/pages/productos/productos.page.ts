@@ -33,6 +33,7 @@ export class ProductosPage implements OnInit {
 
   ngOnInit() {
   }
+  
   ionViewWillEnter() {
     // Resetear productos y skip al volver a la página
     // Esto asegura que se carguen los datos desde 0
@@ -42,12 +43,14 @@ export class ProductosPage implements OnInit {
   }
 
   cargar_productos(event?: any) {
+    // Se obtienen los productos del servicio
     this.productService.obtener_productos_s(this.skip).subscribe(
       // Manejo de respuesta en caso de ser Exitoso
       (response) => {
+        // Se añade los productos cargados despues a la lista
         this.products = [...this.products, ...response.products];
-        this.total = response.total;
-        this.skip += response.limit;
+        this.total = response.total; // Tiene el total de productos
+        this.skip += response.limit; // Trae productos segun un limite
 
         if (event) {
           event.target.complete();

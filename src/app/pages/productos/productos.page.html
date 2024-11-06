@@ -13,6 +13,7 @@
 <ion-content>
   <ion-list>
     <!-- Lista de productos -->
+     <!--Se recorren todos los productos almacenados en la lista -->
     <ion-item *ngFor="let product of products">
       <ion-thumbnail slot="start">
         <img [src]="product.thumbnail" alt="Imagen del producto">

@@ -27,12 +27,19 @@ export class InicioSesionPage implements OnInit {
   }
 
   iniciar(){
+    // Se valida el formulario
     if(this.formulario_login.valid){
+      
+      // Se rescatan los datos del formulario Reactivo
       const { username, password } = this.formulario_login.value;
 
+      // Se usa el servicio de autenticacion
       this.autenticacionS.iniciar_sesion(username, password).subscribe(
         (response) => {
+          // Se guarda el token
           this.autenticacionS.guardar_token(response.accessToken);
+
+          // Redirecciona a la pagina de productos
           this.navCtrl.navigateRoot('/productos')
         },
         (error) => {
