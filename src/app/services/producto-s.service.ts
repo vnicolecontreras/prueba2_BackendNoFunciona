@@ -18,6 +18,6 @@ export class ProductoSService {
 
   obtener_productos_s(skip: number = 0): Observable<{ products: Product[], total: number, skip: number, limit: number }> {
     const headers = this.autenticacionS.obtener_header(); // Incluye el token en la cabecera
-    return this.http.get<{ products: Product[], total: number, skip: number, limit: number }>(`${this.apiUrl}?skip=${skip}`, { headers });
+    return this.http.get<{ products: Product[], total: number, skip: number, limit: number }>(`${this.apiUrl}?skip=${skip}&limit=30`, { headers });
   }
 }

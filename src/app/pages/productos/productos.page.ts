@@ -15,7 +15,7 @@ export class ProductosPage implements OnInit {
   products: Product[] = []; 
 
   // Cantidad Cargada
-  skip: number = 0; 
+  skip: number = 30; 
 
   // Total productos
   total: number = 0;
