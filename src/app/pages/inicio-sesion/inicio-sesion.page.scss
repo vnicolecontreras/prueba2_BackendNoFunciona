@@ -1,0 +1,82 @@
+// Estilos para el encabezado de la página
+ion-header {
+    ion-toolbar {
+      background-color: #488aff; // Color azul para el fondo de la barra de herramientas
+      color: white;
+  
+      .header-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+      }
+    }
+  }
+  
+  // Fondo y contenedor de la página
+  ion-content {
+    --background: #f3f3f3; // Fondo gris claro para el contenido
+  }
+  
+  // Estilos para el contenedor de login
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  // Estilos para la tarjeta de inicio de sesión
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+  }
+  
+  ion-card-header {
+    background-color: #488aff;
+    color: white;
+    padding: 20px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  
+    ion-card-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+  
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #e0e0e0;
+    }
+  }
+  
+  // Estilos para los campos de entrada
+  .input-item {
+    --padding-start: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #f3f3f3;
+    border-radius: 8px;
+  
+    ion-label {
+      color: #666;
+      font-weight: 500;
+    }
+  
+    ion-input {
+      --color: #333;
+    }
+  }
+  
+  // Botón de inicio de sesión
+  .submit-button {
+    margin-top: 20px;
+    --background: #488aff;
+    --background-activated: #3b7dda;
+    --border-radius: 8px;
+    font-weight: bold;
+  }
+  
