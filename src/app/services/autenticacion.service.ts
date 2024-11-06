@@ -42,7 +42,7 @@ export class AutenticacionService {
   obtener_header(){
     const token = this.obtener_token();
     return new HttpHeaders({
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json', 
       Authorization: `Bearer ${token}`,
     })
   }
